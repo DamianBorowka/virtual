@@ -1,0 +1,27 @@
+class Dinglemouse(object):
+    wiek = None
+    plec = None
+    imie = None
+    baza = 'Hello.'  
+    
+    def setAge(self, age):
+        if self.wiek == None:
+            #print (" I am {wiek}.".format(wiek=age))
+            self.baza += " I am {wiek}."
+        self.wiek = age
+        return self
+        
+    def setSex(self, sex):
+        if self.plec == None:
+            self.baza += " I am {plec}."
+        self.plec = sex
+        return self
+        
+    def setName(self, name):
+        if self.imie == None:
+            self.baza += " My name is {imie}."
+        self.imie = name
+        return self
+        
+    def hello(self):
+        return (self.baza.format(wiek = self.wiek, plec = "male" if self.plec == "M" else "female", imie = self.imie)) 
